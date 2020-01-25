@@ -7,6 +7,9 @@
     <property name="height_request">480</property>
     <property name="can_focus">False</property>
     <property name="resizable">False</property>
+    <property name="default_width">800</property>
+    <property name="default_height">480</property>
+    <property name="icon_name">audio-x-generic</property>
     <child>
       <placeholder/>
     </child>
@@ -58,10 +61,11 @@
                     <property name="can_focus">False</property>
                     <property name="halign">start</property>
                     <property name="margin_left">20</property>
+                    <property name="margin_right">20</property>
                     <property name="ellipsize">end</property>
+                    <property name="track_visited_links">False</property>
                     <attributes>
-                      <attribute name="font-desc" value="Montserrat 24"/>
-                      <attribute name="weight" value="bold"/>
+                      <attribute name="font-desc" value="Montserrat Bold 20"/>
                     </attributes>
                   </object>
                   <packing>
@@ -76,9 +80,11 @@
                     <property name="can_focus">False</property>
                     <property name="halign">start</property>
                     <property name="margin_left">20</property>
+                    <property name="margin_right">20</property>
                     <property name="ellipsize">end</property>
+                    <property name="track_visited_links">False</property>
                     <attributes>
-                      <attribute name="font-desc" value="Montserrat 18"/>
+                      <attribute name="font-desc" value="Montserrat 16"/>
                     </attributes>
                   </object>
                   <packing>
@@ -93,9 +99,11 @@
                     <property name="can_focus">False</property>
                     <property name="halign">start</property>
                     <property name="margin_left">20</property>
+                    <property name="margin_right">20</property>
                     <property name="ellipsize">end</property>
+                    <property name="track_visited_links">False</property>
                     <attributes>
-                      <attribute name="font-desc" value="Montserrat 18"/>
+                      <attribute name="font-desc" value="Montserrat 16"/>
                     </attributes>
                   </object>
                   <packing>
@@ -112,14 +120,79 @@
               </packing>
             </child>
             <child>
-              <object class="GtkDrawingArea">
+              <object class="GtkBox">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkProgressBar" id="ProgressBar">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_left">20</property>
+                    <property name="margin_right">20</property>
+                    <property name="margin_top">5</property>
+                    <property name="margin_bottom">5</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkLabel" id="Elapsed">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">start</property>
+                        <property name="margin_left">20</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="Remaining">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">end</property>
+                        <property name="margin_right">20</property>
+                        <property name="justify">center</property>
+                      </object>
+                      <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkDrawingArea">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
               </object>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">3</property>
+                <property name="position">2</property>
               </packing>
             </child>
           </object>
